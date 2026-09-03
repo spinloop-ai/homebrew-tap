@@ -5,13 +5,13 @@
 class Spinloop < Formula
   desc "Configure opencode provider catalogues"
   homepage "https://github.com/spinloop-ai/spinloop"
-  version "1.30.0"
+  version "1.30.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.0/spinloop_darwin_amd64.tar.gz"
-      sha256 "1a7a677cde1ba6b5c49e1f7d89ce77429a158ceffe6dec98f189639a187b00d6"
+      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.1/spinloop_darwin_amd64.tar.gz"
+      sha256 "def68f1fd50a11f81ffaa3c98ca7278d264c100cfb9a79844c450483a6dc8a6a"
 
       define_method(:install) do
         bin.install "spinloop"
@@ -19,8 +19,8 @@ class Spinloop < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.0/spinloop_darwin_arm64.tar.gz"
-      sha256 "de790eaf037c3dcb95aa8d7e6ce782f5f74caf77480b7a2a92f895454ce22ba8"
+      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.1/spinloop_darwin_arm64.tar.gz"
+      sha256 "76a711cc118f5225b337df751ed547f51e06c911b34ebd30728e9517b00bde8d"
 
       define_method(:install) do
         bin.install "spinloop"
@@ -31,16 +31,16 @@ class Spinloop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.0/spinloop_linux_amd64.tar.gz"
-      sha256 "1b3bf00a097053809ede11f2bfce8ad172d05e27c27284c928ce3758fc13d33d"
+      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.1/spinloop_linux_amd64.tar.gz"
+      sha256 "b23417a0ac11306a9229b22618af94b23af3133c063d617283a56aa4532963a4"
       define_method(:install) do
         bin.install "spinloop"
         generate_completions_from_executable(bin/"spinloop", "completion", shells: [:bash, :zsh])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.0/spinloop_linux_arm64.tar.gz"
-      sha256 "3459f50ccd48fb450a9f79e720629b1289deaa19e54bf48d512617f13951e7eb"
+      url "https://github.com/spinloop-ai/spinloop/releases/download/v1.30.1/spinloop_linux_arm64.tar.gz"
+      sha256 "82fd29618204c755c252ff93e2dcf8a7ff94bae5d6716cee039fbba3b8e871e3"
       define_method(:install) do
         bin.install "spinloop"
         generate_completions_from_executable(bin/"spinloop", "completion", shells: [:bash, :zsh])
