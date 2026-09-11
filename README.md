@@ -1,12 +1,24 @@
-# lucinate-ai/homebrew-tap
+# spinloop-ai/homebrew-tap
 
-The Homebrew tap for [lucinate-ai](https://github.com/lucinate-ai) — the terminal-native AI chat client and friends.
+The Homebrew tap for [spinloop-ai](https://github.com/spinloop-ai) and friends — terminal-native AI tooling.
 
-## Install lucinate
+This tap currently carries three formulae:
+
+- **lucinate** — terminal-native chat client for OpenClaw, Hermes, Ollama and OpenAI-compatible providers
+- **outfit** — configure opencode provider catalogues
+- **spinloop** — configure opencode provider catalogues
+
+## Install
 
 ```sh
-brew trust --formula lucinate-ai/tap/lucinate
-brew install lucinate-ai/tap/lucinate
+brew trust --formula spinloop-ai/tap/<formula>
+brew install spinloop-ai/tap/<formula>
+```
+
+For example:
+
+```sh
+brew install spinloop-ai/tap/lucinate
 ```
 
 That's it. macOS and Linux, Intel and Apple Silicon.
@@ -14,16 +26,18 @@ That's it. macOS and Linux, Intel and Apple Silicon.
 ## Upgrade
 
 ```sh
-brew update && brew upgrade lucinate
+brew update && brew upgrade <formula>
 ```
 
 New releases land here automatically, usually within a minute of the upstream tag.
 
 ## Issues, ideas, PRs
 
-This repo only stores the generated formulae — it isn't where the code lives. Please file bugs and feature requests against the upstream project:
+This repo only stores the generated formulae — it isn't where the code lives. Please file bugs and feature requests against the relevant upstream project:
 
 - **lucinate** → [lucinate-ai/lucinate](https://github.com/lucinate-ai/lucinate)
+- **outfit** → [lucinate-ai/outfit](https://github.com/lucinate-ai/outfit)
+- **spinloop** → [spinloop-ai/spinloop](https://github.com/spinloop-ai/spinloop)
 
 ## A note for the curious
 
